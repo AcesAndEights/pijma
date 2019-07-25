@@ -13,6 +13,7 @@ export interface BasicInputProps {
   placeholder?: string
   maxLength?: number
   padded: boolean
+  paddedLeft?: boolean
   disabled?: boolean
   error: boolean
   focused: boolean
@@ -32,6 +33,7 @@ export const BasicInput: FunctionComponent<BasicInputProps> = (props) => {
     m: 0,
     p: 0,
     pr: props.padded ? 7 : undefined,
+    pl: props.paddedLeft ? 9 : undefined,
     r: 0,
     b: 'none',
     bb: props.disabled ? '1px dotted #999' : props.error ? '2px solid #d0021b' : props.focused ? '2px solid #ff8c00' : '1px solid rgba(0, 0, 0, 0.2)',
